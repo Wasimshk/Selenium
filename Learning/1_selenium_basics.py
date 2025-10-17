@@ -31,7 +31,6 @@ driver.maximize_window()
 print(driver.title) #gets the page title
 print(driver.current_url) #gets the current url
 
-
 # //////////////// locators ///////////////////////////////////////////////////
 # ID, NAME, CLASS_NAME, TAG_NAME, XPATH, CSS_SELECTOR, LINK_TEXT, PARTIAL_LINK_TEXT
 driver.find_element(By.NAME, "email").send_keys("hello@gmail.com")
@@ -43,7 +42,7 @@ driver.find_element(By.NAME, "name").send_keys("Wasim")
 selectObj = Select(driver.find_element(By.ID, "exampleFormControlSelect1"))
 selectObj.select_by_visible_text("Female")
 selectObj.select_by_index(0)
-# selectObj.select_by_value()
+# selectObj.select_by_value("female")
 
 driver.find_element(By.CLASS_NAME, "btn-success").click()
 message = driver.find_element(By.XPATH, '//*[@class="alert alert-success alert-dismissible"]').text
